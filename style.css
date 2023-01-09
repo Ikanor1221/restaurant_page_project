@@ -1,0 +1,41 @@
+:root {
+  --pink: #ed1250;
+  --pale-yellow: #fff6da;
+  --dark-blue: #042f4b;
+  --orange: #fbc99d;
+  --fredoka: "Fredoka One", cursive;
+  --poppins: "Poppins", sans-serif;
+  --sansita: "Sansita Swashed", cursive;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: var(--poppins);
+  font-size: 1rem;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+  display: grid;
+  grid-template-rows: 100px 1fr;
+}
+
+header {
+    background-color: var(--dark-blue);
+}
+
+.tabs {
+  display: flex;
+}
+
+.active {
+  border: solid;
+  flex: 1;
+}
