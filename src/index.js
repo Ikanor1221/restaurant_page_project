@@ -1,1 +1,1 @@
-console.log("Hello, Webpack!")
+import { loadPage } from "./loadpage";
