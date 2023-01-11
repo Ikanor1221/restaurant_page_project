@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 :root {
   --pink: #ed1250;
+  --dark-pink: #ce103f;
   --pale-yellow: #fff6da;
   --dark-blue: #042f4b;
   --orange: #fbc99d;
   --fredoka: "Fredoka One", sans-serif;
   --poppins: "Poppins", sans-serif;
   --sansita: "Sansita Swashed", sans-serif;
-
+    --transparent: rgba(0, 0, 0, 0.7);
   
 }
 
@@ -18,12 +20,18 @@ li {
   list-style: none;
 }
 
+a {
+    color: inherit;
+}
+
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
   font-family: var(--poppins);
   font-size: 1rem;
+  text-decoration: none;
+  font-family: var(--poppins);
 }
 
 body {
@@ -34,7 +42,7 @@ body {
 .content {
   flex: 1;
   display: grid;
-  grid-template-rows: 100px 1fr;
+  grid-template-rows: auto 1fr;
 }
 
 header {
@@ -73,8 +81,92 @@ h1 {
 
 .tabs {
   display: flex;
+  position: relative;
 }
 
-.active {
+.tabs > div {
+    flex: 1;
+    position: relative;
+  }
 
-}
+  #home_tab {
+    background: url(https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80) center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  #home_tab > * {
+    margin: 40px;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 700px;
+    background-color: var(--transparent);
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .hero > h2 {
+    font-size: 5rem;
+    font-family: var(--fredoka);
+    color: var(--pink);
+    background: linear-gradient(to right, var(--pink) 0%, var(--orange) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0px;
+  }
+
+  .hero > p {
+    font-size: 1.2rem;
+    font-family: var(--fredoka);
+    color: var(--orange);
+    margin-bottom: 20px;
+  }
+
+  .hero > a {
+    font-size: 1.3rem;
+    /* font-family: var(--fredoka); */
+    color: var(--orange);
+    background-color: var(--pink);
+    padding: 15px;
+    font-weight: 700;
+    border-radius: 30px;
+  }
+
+  .hero > a:hover {
+    background-color: var(--dark-pink);
+    transition: 0.3s ease;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 700px;
+    background-color: var(--transparent);
+    padding: 20px;
+    gap: 20px;
+    color: var(--orange);
+    border-radius: 10px;
+  }
+
+  .info > div {
+    display: flex;
+    gap: 20px;
+  }
+
+  .info span {
+    color: var(--pink);
+  }
+
+  .info .text {
+    font-weight: 700;
+  }
