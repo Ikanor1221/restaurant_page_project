@@ -14,8 +14,6 @@
   
 }
 
-
-
 li {
   list-style: none;
 }
@@ -37,12 +35,21 @@ a {
 body {
   display: flex;
   min-height: 100vh;
+  background-color: var(--pale-yellow);
 }
 
 .content {
   flex: 1;
   display: grid;
   grid-template-rows: auto 1fr;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.invisible {
+    visibility: hidden;
 }
 
 header {
@@ -81,12 +88,13 @@ h1 {
 
 .tabs {
   display: flex;
+  justify-content: center;
   position: relative;
 }
 
 .tabs > div {
     flex: 1;
-    position: relative;
+    position: absolute;
   }
 
   #home_tab {
@@ -96,6 +104,7 @@ h1 {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    position: relative;
   }
 
   #home_tab > * {
@@ -169,4 +178,59 @@ h1 {
 
   .info .text {
     font-weight: 700;
+  }
+
+  #menu_tab {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .menu_header_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu_header_container > img {
+    height: 70px;
+  }
+
+  .menu_header {
+    margin: 10px;
+    font-size: 3rem;
+    position: relative;
+  }
+
+  .menu_header::after {
+    position: absolute;
+    content: "";
+    bottom: 12%;
+    left: 30%;
+    height: 2px;
+    width: 50%;
+    background-color: var(--pink);
+  }
+
+  .menu_grid {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(450px, 1fr) );
+    grid-auto-rows: max(250px, auto);
+    gap: 20px;
+    margin: 10px;
+    max-width: min(95vw, 1200px);
+    background-color: var(--orange);
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .menu_grid img {
+    height: 250px;
+  }
+  
+  .item {
+    display: flex;
+    gap: 10px;
   }
