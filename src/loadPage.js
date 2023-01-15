@@ -9,7 +9,7 @@ const loadPage = (() => {
   <ul class="links">
     <li id="home">Home</li>
     <li id="menu">Menu</li>
-    <li id="location">Contact us</li>
+    <li id="contact">Contact us</li>
   </ul>`
 
   const tabsElement = document.createElement("div");
@@ -21,3 +21,4 @@ const loadPage = (() => {
 })();
 
 export { loadPage };
+
