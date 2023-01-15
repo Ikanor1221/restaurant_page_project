@@ -1,13 +1,12 @@
 const loadMenu = (() => {
+  const tabsElement = document.querySelector("#tabs");
 
-    const tabsElement = document.querySelector("#tabs");
-  
-    const menuElement = document.createElement("div");
-    menuElement.setAttribute("id", "menu_tab")
-    menuElement.classList.add("tab_main")
-    menuElement.classList.add("inactive")
-  
-    menuElement.innerHTML = `
+  const menuElement = document.createElement("div");
+  menuElement.setAttribute("id", "menu_tab");
+  menuElement.classList.add("tab_main");
+  menuElement.classList.add("inactive");
+
+  menuElement.innerHTML = `
     <div class="menu_header_container">
       <h3 class="tab_header menu_header">Menu</h3>
       <img
@@ -112,9 +111,9 @@ const loadMenu = (() => {
         </div>
       </div>
     </div>
-    `
-  
-    tabsElement.appendChild(menuElement);
-  })();
-  
-  export { loadMenu };
+    `;
+
+  tabsElement.appendChild(menuElement);
+})();
+
+export { loadMenu };

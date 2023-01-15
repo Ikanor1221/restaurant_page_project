@@ -1,5 +1,4 @@
 const loadPage = (() => {
-
   const contentElement = document.querySelector("#content");
 
   const headerElement = document.createElement("header");
@@ -10,7 +9,7 @@ const loadPage = (() => {
     <li id="home">Home</li>
     <li id="menu">Menu</li>
     <li id="contact">Contact us</li>
-  </ul>`
+  </ul>`;
 
   const tabsElement = document.createElement("div");
   tabsElement.classList.add("tabs");
@@ -21,4 +20,3 @@ const loadPage = (() => {
 })();
 
 export { loadPage };
-

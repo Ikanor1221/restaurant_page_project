@@ -9,21 +9,25 @@ const contactElement = document.querySelector("#contact");
 
 const homeTab = document.querySelector("#home_tab");
 const menuTab = document.querySelector("#menu_tab");
-const contactTab= document.querySelector("#contact_tab");
+const contactTab = document.querySelector("#contact_tab");
 
 function addSwitchListener(element) {
-    element.addEventListener("click", () => {
-        homeTab.classList.add("inactive");
-        menuTab.classList.add("inactive");
-        contactTab.classList.add("inactive");
-        console.log(element.id);
-        let tab = document.querySelector("#" + element.id + "_tab");
-        tab.classList.remove("inactive");
-    })
+  element.addEventListener("click", (e) => {
+    homeTab.classList.add("inactive");
+    menuTab.classList.add("inactive");
+    contactTab.classList.add("inactive");
+    let tab = document.querySelector("#" + element.id + "_tab");
+    tab.classList.remove("inactive");
+  });
 
-    return
+  return;
 }
 
 addSwitchListener(homeElement);
 addSwitchListener(menuElement);
 addSwitchListener(contactElement);
+
+const buttonElement = document.querySelector("button");
+buttonElement.addEventListener("click", (event) => {
+  event.preventDefault();
+});

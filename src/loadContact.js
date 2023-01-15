@@ -1,22 +1,21 @@
 const loadContact = (() => {
+  const tabsElement = document.querySelector("#tabs");
 
-    const tabsElement = document.querySelector("#tabs");
-  
-    const contactElement = document.createElement("div");
-    contactElement.setAttribute("id", "contact_tab")
-    contactElement.classList.add("tab_main")
-    contactElement.classList.add("inactive")
-  
-    contactElement.innerHTML = `
+  const contactElement = document.createElement("div");
+  contactElement.setAttribute("id", "contact_tab");
+  contactElement.classList.add("tab_main");
+  contactElement.classList.add("inactive");
+
+  contactElement.innerHTML = `
     <h3 class="tab_header contact_header">Contact us</h3>
     <div class="contact_container">
       <div class="info">
         <div class="infoRow location">
           <span class="icon material-symbols-outlined">location_on</span>
           <p>
-            1024 Oakwood Ave
+            1100 Fillmore St
             <br />
-            San Diego, CA 22434
+            San Francisco, CA 94115
           </p>
         </div>
         <div class="infoRow hours">
@@ -31,7 +30,7 @@ const loadContact = (() => {
           <span class="icon material-symbols-outlined">call</span>
           <p>(222)-888 5555</p>
         </div>
-        <form action="">
+        <form id="form1" action="">
           <h4 class="infoRow message">
             <span class="icon material-symbols-outlined">mail</span>
             <p>
@@ -60,7 +59,7 @@ const loadContact = (() => {
             ></textarea>
             <label class="extra" for="message">Your Message</label>
           </div>
-          <button id="form_button">Send</button>
+          <button type="submit" form="form1" id="form_button">Send</button>
         </form>
       </div>
       <div class="mapouter">
@@ -95,9 +94,9 @@ const loadContact = (() => {
         </div>
       </div>
     </div>
-    `
-  
-    tabsElement.appendChild(contactElement);
-  })();
-  
-  export { loadContact };
+    `;
+
+  tabsElement.appendChild(contactElement);
+})();
+
+export { loadContact };

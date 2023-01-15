@@ -15,7 +15,6 @@
 }
 
 .tab_main.inactive {
-  /* visibility: hidden; */
   display: none;
 }
 
@@ -62,7 +61,6 @@ h1 {
   font-size: 3.5rem;
   font-family: var(--fredoka);
   color: var(--pink);
-  /* justify-self: start; */
 }
 
 .links {
@@ -144,7 +142,6 @@ h1 {
 
 .hero > a {
   font-size: 1.3rem;
-  /* font-family: var(--fredoka); */
   color: var(--orange);
   background-color: var(--pink);
   padding: 15px;
@@ -264,7 +261,6 @@ h1 {
 .input_box label {
   position: absolute;
   transition: 0.3s;
-  /* margin: 1rem 0; */
   left: 0;
   bottom: 10px;
   color: #666;
