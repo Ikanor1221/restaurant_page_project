@@ -2,6 +2,9 @@ import { loadPage } from "./loadPage";
 import { loadHome } from "./loadHome";
 import { loadMenu } from "./loadMenu";
 import { loadContact } from "./loadContact";
+import { loadImages } from "./loadImages";
+
+const headElement = document.querySelector("head")
 
 const homeElement = document.querySelector("#home");
 const menuElement = document.querySelector("#menu");
@@ -22,6 +25,8 @@ function addSwitchListener(element) {
 
   return;
 }
+
+
 
 addSwitchListener(homeElement);
 addSwitchListener(menuElement);
