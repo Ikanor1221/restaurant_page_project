@@ -1,15 +1,18 @@
+// Load Home tab
+
 const loadHome = (() => {
   const tabsElement = document.querySelector("#tabs");
 
   const homeElement = document.createElement("div");
   homeElement.setAttribute("id", "home_tab");
+  homeElement.setAttribute("data-tab-content", "#home_tab");
   homeElement.classList.add("tab_main");
 
   homeElement.innerHTML = `
     <div class="hero">
       <h2>The best people food in the area!</h2>
       <p>Cheap and good for all types of people!</p>
-      <a href="#" class="order_now">Order now</a>
+      <a href="#" data-tab-target="#menu_tab" class="order_now">Order now</a>
     </div>
     <div class="info dark_bg">
       <div class="infoRow location">

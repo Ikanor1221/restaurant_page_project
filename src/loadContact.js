@@ -1,8 +1,11 @@
+// Load Contacts tab
+
 const loadContact = (() => {
   const tabsElement = document.querySelector("#tabs");
 
   const contactElement = document.createElement("div");
   contactElement.setAttribute("id", "contact_tab");
+  contactElement.setAttribute("data-tab-content", "#contact_tab");
   contactElement.classList.add("tab_main");
   contactElement.classList.add("inactive");
 

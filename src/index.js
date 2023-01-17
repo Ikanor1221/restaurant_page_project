@@ -1,38 +1,34 @@
+// Load all HTML content
+
 import { loadPage } from "./loadPage";
 import { loadHome } from "./loadHome";
 import { loadMenu } from "./loadMenu";
 import { loadContact } from "./loadContact";
 import { loadImages } from "./loadImages";
 
-const headElement = document.querySelector("head")
+// Find all links and related content by the custom attributes and apply switchListeners
+const links = document.querySelectorAll("[data-tab-target]");
+const content = document.querySelectorAll("[data-tab-content]");
+links.forEach((node) => {
+  addSwitchListener(node);
+});
 
-const homeElement = document.querySelector("#home");
-const menuElement = document.querySelector("#menu");
-const contactElement = document.querySelector("#contact");
-
-const homeTab = document.querySelector("#home_tab");
-const menuTab = document.querySelector("#menu_tab");
-const contactTab = document.querySelector("#contact_tab");
-
-function addSwitchListener(element) {
-  element.addEventListener("click", (e) => {
-    homeTab.classList.add("inactive");
-    menuTab.classList.add("inactive");
-    contactTab.classList.add("inactive");
-    let tab = document.querySelector("#" + element.id + "_tab");
-    tab.classList.remove("inactive");
-  });
-
-  return;
-}
-
-
-
-addSwitchListener(homeElement);
-addSwitchListener(menuElement);
-addSwitchListener(contactElement);
-
+// Remove default event of form sending from the button in form
 const buttonElement = document.querySelector("button");
 buttonElement.addEventListener("click", (event) => {
   event.preventDefault();
 });
+
+//Switch the tab to selected, make others inactive
+function addSwitchListener(element) {
+  element.addEventListener("click", (e) => {
+    content.forEach((node) => {
+      node.classList.add("inactive");
+    }); // Make content inactive
+    let tab = document.querySelector(
+      `[data-tab-content= "${element.dataset.tabTarget}"]`
+    ); //Select the right tab and make it active
+    tab.classList.remove("inactive");
+  });
+  return;
+}

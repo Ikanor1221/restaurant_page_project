@@ -2,6 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sansita:ital@0;1&display=swap");
 
+/* General */
+
 :root {
   --pink: #ed1250;
   --dark-pink: #ce103f;
@@ -12,10 +14,6 @@
   --poppins: "Poppins", sans-serif;
   --sansita: "Sansita", sans-serif;
   --transparent: rgba(0, 0, 0, 0.7);
-}
-
-.tab_main.inactive {
-  display: none;
 }
 
 li {
@@ -41,6 +39,8 @@ body {
   min-height: 100vh;
   background-color: var(--pale-yellow);
 }
+
+/* Content and Header */
 
 .content {
   flex: 1;
@@ -69,7 +69,7 @@ h1 {
   gap: 40px;
 }
 
-.links > li {
+.links a {
   font-weight: 700;
   cursor: pointer;
   color: var(--pale-yellow);
@@ -77,7 +77,7 @@ h1 {
   transition: 0.3s ease;
 }
 
-.links > li:hover {
+.links a:hover {
   color: var(--pink);
 }
 
@@ -92,12 +92,18 @@ h1 {
   position: absolute;
 }
 
+/* Home tab */
+
 .tab_main {
   position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-items: center;
+}
+
+.tab_main.inactive {
+  display: none;
 }
 
 #home_tab {
@@ -182,6 +188,8 @@ h1 {
   font-weight: 700;
 }
 
+/* Menu tab */
+
 .menu_header_container {
   display: flex;
   align-items: center;
@@ -229,6 +237,8 @@ h1 {
   display: flex;
   gap: 10px;
 }
+
+/* Contact tab */
 
 .contact_container {
   display: flex;
